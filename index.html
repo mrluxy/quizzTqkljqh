@@ -3,17 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    <link rel="stylesheet" href="style.css"/>
+    <title>form</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <!--Page d'accueil-->
+    <div class="header" style="align-items: center;justify-content: center;background-color: rgb(216, 216, 216);">
+      <p>Bienvenue</p>
+    </div>
+    <div style="display: flex;flex-direction: row;">
+      <div class="container" style="flex-direction: column;width: 50%;padding:10px;background-color: rgb(230, 223, 223);">
+        <h1 id="formName">Nom du formulaire</h1>
+        <p id="nbQuestions">? questions</p>
+        <img id="formImg" src="https://i.kym-cdn.com/photos/images/original/001/501/394/6f8.png"/>
+      </div>
+      <div class="container" style="flex-direction: column;width: 50%;padding:10px;">
+          <h1>Informations </h1>
+          <!--<form action="./QCM.html" method="POST">-->
+            <table>
+              <tr>
+                <td>Nom :</td>
+                <td><input id="inputNom" style="width: 100%;" type="text"></td>
+              </tr>
+              <tr>
+                <td>Prénom :</td>
+                <td><input id="inputPrenom" style="width: 100%;" type="text"></td>
+              </tr>
+              <tr>
+                <td>Mail :</td>
+                <td><input id="inputMail" style="width: 100%;" type="text"></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><input onclick="startQCM();" style="width: 100%;" type="submit"></td>
+                </tr>
+            </table>
+          <!--</form>-->
+      </div>
+    </div>
+    
 
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="./rendererIndex.js"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    <link rel="stylesheet" href="style.css"/>
+    <title>form</title>
+  </head>
+  <body>
+      <button onclick="reset()" style="position: absolute;bottom: 3px; right: 3px;">Recommencer</button>
+    <!--Page d'accueil-->
+    <div class="header" style="align-items: center;justify-content: center;background-color: rgb(216, 216, 216);">
+      <p>Résultat</p>
+    </div>
+    <div style="display: flex;flex-direction: row;">
+      <div class="container" style="flex-direction: column;width: 50%;padding:10px;background-color: rgb(230, 223, 223);">
+        <img id="resultImg" src="https://i.kym-cdn.com/photos/images/original/001/501/394/6f8.png"/>
+      </div>
+      <div class="container" style="flex-direction: column;width: 50%;padding:10px;height: auto;">
+        <h1 id="resultReact">Impossible !</h1>
+        <p style="margin-bottom: 15px;" id="resultNB">? réponses justes sur ? !</p>
+        <p id="resultCompl">Tu fera mieux la prochaine fois..</p>
+        <button style="margin-top:50px;" id="diplomeButton">Télécharger mon diplôme</button>
+      </div>
+    </div>
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./rendererResults.js"></script>
+  </body>
+</html>

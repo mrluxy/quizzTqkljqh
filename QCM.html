@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    <link rel="stylesheet" href="style.css"/>
+    <title>form</title>
+  </head>
+  <body>
+      <button onclick="reset()" style="position: absolute;bottom: 3px; right: 3px;">Reset</button>
+    <!--Page d'accueil-->
+    <div class="header" style="align-items: center;justify-content: center;background-color: rgb(216, 216, 216);">
+      <p>Questionnaire</p>
+      <h1 style="position: absolute;top: 5px;right: 5px;" id="evolutionQCM"></h1>
+    </div>
+    <div style="display: flex;flex-direction: row;">
+      <div class="container" style="flex-direction: column;width: 50%;padding:10px;background-color: rgb(230, 223, 223);">
+        <h1 id="nomQuestion">Question</h1>
+        <img id="questImg" src="https://i.kym-cdn.com/photos/images/original/001/501/394/6f8.png"/>
+      </div>
+      <div class="container" id="answers" style="flex-direction: column;width: 50%;padding:10px;height: auto;">
+
+      </div>
+    </div>
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./rendererQCM.js"></script>
+  </body>
+</html>
